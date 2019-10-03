@@ -1,7 +1,7 @@
 const likes = require("./whoLikesIt");
 
 describe("People who likes this post", () => {
-  describe("If user input some names", () => {
+  describe("If the user input some names", () => {
     it("Passes in an empty array", () => {
       expect(likes([])).toBe("no one likes this");
     });
