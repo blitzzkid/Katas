@@ -2,9 +2,6 @@ const likes = require("./whoLikesIt");
 
 describe("People who likes this post", () => {
   describe("If the user input some names", () => {
-    it("Passes in an empty array", () => {
-      expect(likes([])).toBe("no one likes this");
-    });
     it("Passes in an array with 1 name", () => {
       expect(likes(["Peter"])).toBe("Peter likes this");
     });
@@ -28,9 +25,12 @@ describe("People who likes this post", () => {
     });
   });
 
-  describe("If the user did not input anything", () => {
-    it("should return a prompt", () => {
+  describe("If the user did not input any names", () => {
+    it("Nothing passed in", () => {
       expect(likes()).toBe("no one likes this");
+    });
+    it("Passes in an empty array", () => {
+      expect(likes([])).toBe("no one likes this");
     });
   });
 });
